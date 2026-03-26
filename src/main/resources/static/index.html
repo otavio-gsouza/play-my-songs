@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayMySongs - FIPP</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <h1>PlayMySongs 🎵</h1>
+</header>
+
+<main>
+    <section class="upload-section">
+        <h2>Cadastrar Nova Música</h2>
+        <form id="formUpload">
+            <div class="form-group">
+                <input type="text" id="titulo" placeholder="Título da Música" required>
+                <input type="text" id="artista" placeholder="Nome do Artista" required>
+            </div>
+
+            <div class="form-group">
+                <select id="estilo" required>
+                    <option value="" disabled selected>Carregando estilos...</option>
+                </select>
+
+                <label for="file">Selecione o MP3:</label>
+                <input type="file" id="file" accept="audio/mpeg" required>
+            </div>
+
+            <button type="button" class="btn-save" onclick="fazerUpload()">Salvar Música no Banco</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <section class="search-section">
+        <h2>Sua Biblioteca</h2>
+        <div class="search-box">
+            <input type="text" id="txtBusca" placeholder="Pesquisar por título ou artista...">
+            <button class="btn-search" onclick="buscarMusicas()">Buscar</button>
+        </div>
+
+        <div id="listaMusicas"></div>
+    </section>
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -3,6 +3,8 @@ package unoeste.fipp.springplaymysongs.entities;
 public class Music {
     private String titulo, estilo, artista, musicFileName;
 
+    public Music() {}
+
     public Music(String titulo, String estilo, String artista) {
         this.titulo = titulo;
         this.estilo = estilo;

@@ -11,7 +11,7 @@ import unoeste.fipp.springplaymysongs.services.StyleService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("api")
 public class StyleController {
     @Autowired
     private StyleService service;

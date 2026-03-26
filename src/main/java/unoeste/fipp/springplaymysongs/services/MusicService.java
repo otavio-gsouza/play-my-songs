@@ -52,6 +52,10 @@ public class MusicService {
         return novaMusica;
     }
 
+    public List<Music> pesquisarMusicas(String termo) {
+        return musicRepository.buscarPorTermo(termo);
+    }
+
     public List<Style> findMusicStyles() {
         return styleRepository.findAll();
     }
